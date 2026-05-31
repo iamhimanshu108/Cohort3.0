@@ -6,8 +6,3 @@
 // var a = 10; // Declaration
 //  a = 20; // Initialization
 
-if(condition){
-    agar condition true hoti hai to ye block execute hoga
-    console.log("Condition is true");
-    
-}
