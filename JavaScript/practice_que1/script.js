@@ -303,3 +303,29 @@
 //         console.log("The number is zero.");
 //     }
 
+// ## Truthy & Falsy
+
+// 1. Check whether an empty string is truthy or falsy.
+// 2. Check whether `0` is truthy or falsy.
+// 3. Check whether `[]` is truthy or falsy.
+// 4. Create a variable and print `"Valid"` if it has a value otherwise print `"Invalid"`.
+
+
+// var emptyString = "";
+// console.log(Boolean(emptyString)); // false
+
+// var zero = 0;
+// console.log(Boolean(zero)); // false
+
+
+// var emptyArray = [];
+// console.log(Boolean(emptyArray)); // true
+
+// var value = "Hello";
+// if (value) {
+//     console.log("Valid");
+// } else {
+//     console.log("Invalid");
+// }
+
+            
