@@ -349,3 +349,108 @@
 // var greater = (a > b) ? a : b;
 // console.log(greater); // 20
 
+// ## Mixed Practice Questions
+
+// 1. Create a mini biodata program using variables and template literals.
+// 2. Calculate the area of a rectangle.
+// 3. Calculate the simple interest.
+// 4. Convert temperature from Celsius to Fahrenheit.
+// 5. Convert kilometers into meters.
+// 6. Calculate total marks and percentage of 5 subjects.
+// 7. Calculate electricity bill based on units consumed.
+// 8. Create a username generator using first name and birth year.
+// 9. Check whether a string starts with a specific letter.
+// 10. Count the total characters in a sentence excluding spaces.
+
+
+    // `var name = "John Doe"; `
+    // var age = 30;
+    // var city = "New York";
+    // var biodata = `My name is ${name}, I am ${age} years old, and I live in ${city}.`;
+    // console.log(biodata); // "My name is John Doe, I am 30 years old, and I live in New York."
+
+
+// var length = 5;
+// var width = 3;
+// var area = length * width;
+// console.log("Area of the rectangle:", area); // 15
+
+// var pricipal = 1000;
+// var rate = 5;
+// var time = 2;
+// var simpleInterest = (pricipal * rate * time) / 100;
+// console.log("Simple Interest:", simpleInterest); // 100
+ 
+
+// var celsius = 25;
+// var fahrenheit = (celsius * 9/5) + 32;
+// console.log(`${celsius}°C is equal to ${fahrenheit}°F`); // "25°C is equal to 77°F"
+
+// var kilometers = 5;
+// var meters = kilometers * 1000;
+// console.log(`${kilometers} kilometers is equal to ${meters} meters`); // "5 kilometers is equal to 5000 meters"
+
+// var marks = [85, 90, 78, 92, 88];
+// var totalMarks = marks.reduce((total, mark) => total + mark, 0);
+// var percentage = (totalMarks / (marks.length * 100)) * 100;
+// console.log("Total Marks:", totalMarks); // 433
+// console.log("Percentage:", percentage.toFixed(2) + "%"); // "86.60%"
+
+// var unitsConsumed = 150;
+// var ratePerUnit = 0.5;
+// var billAmount = unitsConsumed * ratePerUnit;
+// console.log("Electricity Bill:", billAmount); // 75
+
+// var firstName = "Alice";
+// var birthYear = 1990;
+// var username = `${firstName}${birthYear}`;
+// console.log("Generated Username:", username); // "Alice1990" 
+// var str = "Hello World";
+// var startsWithH = str.startsWith("H");
+// console.log(startsWithH); // true
+
+// var sentence = "JavaScript is great";
+// var charCount = sentence.replace(/\s/g, '').length;
+// console.log("Total characters excluding spaces:", charCount); // 19
+
+
+// ## Logical Thinking Questions
+
+// 1. Take two numbers and print which one is greater.
+// 2. Check whether a number lies between 10 and 50.
+// 3. Check whether a password length is greater than 8.
+// 4. Check if a person can drive:
+// - age > 18
+// - has license = true
+// 1. Check whether a number is divisible by 2, 3, or both.
+// 2. Print `"Good Morning"`, `"Good Afternoon"`, or `"Good Evening"` based on time.
+// 3. Find whether a number is a multiple of 10.
+// 4. Create a simple discount calculator.
+// 5. Check whether a product is in stock.
+// 6. Calculate final bill after GST.
+
+
+// var num1 = 10;
+// var num2 = 20;
+// if (num1 > num2) { 
+//     console.log(`${num1} is greater than ${num2}`);
+// }   else if (num2 > num1) { 
+//     console.log(`${num2} is greater than ${num1}`);
+// } else {
+//     console.log("Both numbers are equal.");
+// }
+
+// var num = 25;
+// if (num > 10 && num < 50) {
+//     console.log(`${num} lies between 10 and 50.`);
+// } else {
+//     console.log(`${num} does not lie between 10 and 50.`);
+// }     
+
+
+// var password=   "mysecretpassword";
+// if (password.length > 8) {
+//     console.log("Password is strong.");
+// } else {
+//     console.log("Password is weak. It should be greater than 8 characters.");
+// }
