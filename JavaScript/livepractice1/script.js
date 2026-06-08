@@ -42,11 +42,54 @@ let marks = [80,90,70,85,95];
 
 // Q3 Most Frequent Number
 
-let number = [1,2,3,2,4,2,5,1,1,1]
+// let number = [1,2,3,2,4,2,5,1,1,1];
 
-let count = {}
-for(let  i = 0; i <number.length; i++){
-    let num = number[i];
-    if(count[num])
-}
+// let count = {};
+// for (let i = 0; i < number.length; i++) {
+//     let num = number[i];
+//     if (count[num]) {
+//         count[num]++;   // increase count if already exists
+//     } else {
+//         count[num] = 1; // initialize count if first time
+//     }
+// }
+
+// console.log(count);
+
+
+
+// q1;  update user age;
+
+// let  user ={
+//     name: "Ritik",
+//     age: 20
+// }
+
+// console.log(user.age)
+
+// user.age = 21
+
+// console.log(user.age)
+
+// Question 5 (Moderate) — Print User Information
+
+// let user= {
+// name:"Ritik",
+// age:20,
+// city:"Bhopal"
+// };
+
+// for (const [key, value] of Object.entries(user)){
+//     console.log(key,value)
+// }
+
+
+//Question 6 (Hard) — Highest Paid Employee
+// let employees= {
+//     aman:25000,
+//     ritik:50000,
+//     priya:45000
+// };
+//Find the employee with the highest salary.
+
 
