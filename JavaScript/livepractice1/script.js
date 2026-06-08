@@ -93,3 +93,24 @@ let marks = [80,90,70,85,95];
 //Find the employee with the highest salary.
 
 
+//Question 10 (Easy) — Find Adult Users
+let users= [
+{ name:"Ritik", age:20 },
+{ name:"Aman", age:16 },
+{ name:"Priya", age:25 }
+];
+
+function adult(users){
+    return users.filter((user) =>user.age >=18)
+
+}
+
+console.log(adult(users))
+
+
+//Question 11 (Moderate) — Shopping Cart Total
+let cart= [
+{ name:"Mouse", price:500, qty:2 },
+{ name:"Keyboard", price:1000, qty:1 },
+{ name:"Monitor", price:10000, qty:1 }
+];
