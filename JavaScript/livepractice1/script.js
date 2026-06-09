@@ -114,3 +114,13 @@ let cart= [
 { name:"Keyboard", price:1000, qty:1 },
 { name:"Monitor", price:10000, qty:1 }
 ];
+
+function total(cart){
+    return cart.reduce((acc,currentItem) =>{
+        return acc + currentItem.price * currentItem.qty
+    },0)
+}
+
+
+console.log(total(cart))
+
