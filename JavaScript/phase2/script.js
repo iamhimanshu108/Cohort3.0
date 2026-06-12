@@ -104,3 +104,17 @@
 // reverseString("Hello");
 
 //
+
+
+// ## Intermediate Level
+
+// 1. Write a function expression for multiplication.
+// 2. Convert a normal function into an arrow function.
+// 3. Create a function that accepts unlimited numbers and returns their sum using rest operator.
+// 4. Write a function that counts vowels in a string.
+// 5. Create a function that checks if a string is palindrome.
+// 6. Write a callback function example using `setTimeout`.
+// 7. Create a higher-order function that executes another function twice.
+// 8. Write a function that returns another function.
+// 9. Create a pure function for subtraction.
+// 10. Create an impure function using global variable modification.
