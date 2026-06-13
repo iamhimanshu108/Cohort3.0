@@ -118,3 +118,16 @@
 // 8. Write a function that returns another function.
 // 9. Create a pure function for subtraction.
 // 10. Create an impure function using global variable modification.
+
+
+// const multiply = function(a, b) {
+//     return a * b;
+// }
+
+// console.log(multiply(5, 10));
+
+// const add = (a, b) => a + b;
+
+// console.log(add(5, 10));
+
+
