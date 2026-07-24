@@ -1,21 +1,32 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from "react";
 
 const App = () => {
+  console.log("app rendering...");
 
-	const [user, setUser] = useState("Himanshu");
+  const [count, setCount] = useState(0);
+  let [user, setUser] = useState(0);
 
-	let handleClick = () => {
-		setUser("Rohit");
-	}
+  return (
+    <div>
+      <h1>Count is - {count}</h1>
+      <h1>name is - {user}</h1>
 
-	return (
-		<div>
-			<h1>Form Handling in React</h1>
-			<h2>User is - {user}</h2>
-			<button onClick={handleClick}> Change Name</button>
-		</div>
-	);
-}
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        increment
+      </button>
+      <button
+        onClick={() => {
+          user++;
+        }}
+      >
+        Change name
+      </button>
+    </div>
+  );
+};
 
 export default App;
