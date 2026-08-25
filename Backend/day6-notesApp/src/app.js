@@ -1,33 +1,19 @@
-const express = require('express');
-const NotesModel = require('./models/notes.model');
-const connectDB = require('./config/db');
-
-connectDB()
+const express = require("express");
+const NotesModel = require("./models/notes.model");
+const connectDB = require("./config/db");
+const createNotesController = require("./controllers/notes.controller");
+const notesRoute = require("./routes/notes.route");
 
 const app = express();
 
-app.use(express.json)
+connectDB();
 
-app.get("/", (req,res) => {
-    res.send("Sb Mst hai")
-})
+app.use(express.json());
 
-app.post("/create",  async (req,res) => {
-    try {
-        let {title, description} = req.body;
+app.get("/", (req, res) => {
+  res.send("ok got it");
+});
 
-        let newNote = await NotesModel.create({
-            title,
-            description,
-        })
-
-        return res.status(201).json({
-            message: "Note Created Successfully",
-            data: newNote,
-        })
-    } catch (error) {
-        console.log("Error MSG" , error)
-    }
-})
+app.use("/notes", notesRoute);
 
 module.exports = app;
