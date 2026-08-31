@@ -1,29 +1,20 @@
-import React from "react";
+const colours = [
+  "from-amber-100 to-orange-50 border-amber-200",
+  "from-violet-100 to-indigo-50 border-violet-200",
+  "from-emerald-100 to-teal-50 border-emerald-200",
+  "from-rose-100 to-pink-50 border-rose-200",
+  "from-sky-100 to-cyan-50 border-sky-200",
+];
 
-const NoteCard = ({ note, deleteNote, noteForUpdate }) => {
+const NoteCard = ({ note, index, deleteNote, noteForUpdate }) => {
+  const colour = colours[index % colours.length];
   return (
-    <div className="w-[30%] border border-white p-3 flex flex-col gap-4 rounded-xl">
-      <h1>{note.title}</h1>
-      <p className="text-xs">
-        {note.description.length > 20
-          ? note.description.substring(0, 20)
-          : note.description}
-      </p>
-      <div className="flex justify-between">
-        <button
-          onClick={() => noteForUpdate(note)}
-          className="p-2 bg-yellow-600 text-white rounded"
-        >
-          Update
-        </button>
-        <button
-          onClick={() => deleteNote(note._id)}
-          className="p-2 bg-red-600 text-white rounded"
-        >
-          Delete
-        </button>
-      </div>
-    </div>
+    <article className={`group flex min-h-56 flex-col rounded-3xl border bg-gradient-to-br p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg ${colour}`}>
+      <div className="mb-5 flex items-start justify-between gap-3"><span className="rounded-full bg-white/70 px-3 py-1 text-xs font-bold tracking-wider text-slate-500 uppercase">Note</span><span className="text-lg text-slate-400">✦</span></div>
+      <h2 className="text-xl font-extrabold leading-tight text-slate-900">{note.title}</h2>
+      <p className="mt-3 line-clamp-4 whitespace-pre-wrap text-sm leading-6 text-slate-600">{note.description}</p>
+      <div className="mt-auto flex items-center gap-2 pt-5 opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100"><button onClick={() => noteForUpdate(note)} className="rounded-lg bg-white/80 px-3 py-2 text-sm font-bold text-slate-700 transition hover:bg-white">Edit</button><button onClick={() => deleteNote(note._id)} className="rounded-lg px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-100">Delete</button></div>
+    </article>
   );
 };
 
