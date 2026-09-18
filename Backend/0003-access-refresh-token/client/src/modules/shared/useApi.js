@@ -10,23 +10,21 @@ export default function useApi() {
         withCredentials: true,
     });
 
-    api.interceptors.request.use(
-        (config) => {
-            const token = authContext?.authState?.accessToken;
-            if (token) {
-                config.headers.Authorization = `Bearer ${token}`;
-            }
+    api.interceptors.request.use(config => {
+        config.headers.Authorization = `Bearer ${authContext.accessToken}`
 
-            return config;
+        return config;
+    })
 
+    api.interceptors.response.use(async response =>{
+        if(response.status === 401){
+          const res = await api.post('/auth/refresh')
 
-        },  
+          authContext.setAccessToken(res.data.data.accessToken)
 
-
-        (error) => {
-            return Promise.reject(error);
+          return 
         }
-    );
+    })
 
     return api;
 }   
