@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-// Duplicate emails are checked in the register controller instead of a unique index.
+// NOTE: no indexes in any model on purpose (no unique, no index: true).
+// Duplicate emails are checked in the register controller instead.
 const userSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },

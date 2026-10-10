@@ -29,7 +29,4 @@ const restaurantSchema = new mongoose.Schema(
   { timestamps: { createdAt: true, updatedAt: false } }
 );
 
-restaurantSchema.index({ name: 1, _id: 1 });
-restaurantSchema.index({ city: 1, name: 1, _id: 1 });
-
 module.exports = mongoose.model("Restaurant", restaurantSchema);
