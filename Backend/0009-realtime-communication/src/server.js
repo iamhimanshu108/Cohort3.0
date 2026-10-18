@@ -1,9 +1,10 @@
-import app  from "./app/app.js";
-import  { createServer} from "node:http";
-import {} from "socket.io"
+import app from "./app/app.js";
+import { createServer } from "node:http"
+import initiazeSocket from "./socket/socket.server.js";
 
-const httpserver = createServer(app);
+const httpServer = createServer(app);
+initiazeSocket(httpServer);
 
-httpserver.listen(3000, () => {
+httpServer.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
