@@ -9,5 +9,12 @@ export default function initiazeSocket(httpServer) {
         socket.on("disconnect", () => {
             console.log("A user disconnected:", socket.id);
         });
+
+
+        socket.on("elon", (msg) => {
+            console.log(msg);
+            socket.emit("musk")
+
+        })
     })
 }
