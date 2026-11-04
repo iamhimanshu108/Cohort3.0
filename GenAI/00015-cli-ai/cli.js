@@ -3,5 +3,3 @@ import main from "./src/main.js";
 
 main()
 
-console.log("Hello, CLI World!");
-
