@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import axios from "axios";
 
 import { CONFIG_DIR } from "./constant.js";
 
@@ -45,8 +46,35 @@ export async function saveApiKey(apiKey) {
  */
 
 export async function getApiKey() {
-  const settings = await getSettingsFile();
+    const settings = await getSettingsFile()
+    const apiKey = settings.apiKey || null
 
-  return settings.apiKey || null;
-  
+    if (!apiKey) {
+        return {
+            error: "API key not found in settings file"
+        }
+    }
+
+    try {
+        await axios.get("https://api.groq.com/openai/v1/models", {
+            headers: {
+                "Authorization": `Bearer ${apiKey}`
+            }
+        })
+
+        return {
+            apiKey
+        }
+    } catch (err) {
+        const status = err.response?.status
+        if (status === 401 || status === 403) {
+            return {
+                error: "Invalid API key"
+            }
+        }
+
+        return {
+            error: "Unable to validate API key"
+        }
+    }
 }
