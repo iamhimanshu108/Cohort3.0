@@ -1,16 +1,7 @@
 #!/usr/bin/env node
+import main from "./src/main.js";
 
-import "dotenv/config";
-import os from "os";
-import path from "path";
-
-const homeDir = os.homedir();
-
-console.log(homeDir);
-
-
-
-
+main()
 
 console.log("Hello, CLI World!");
 
